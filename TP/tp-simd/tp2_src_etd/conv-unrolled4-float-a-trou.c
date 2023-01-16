@@ -25,6 +25,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 #include "utils.h"
+#include <stdint.h>
 
 /*
  * TODO: Implantation déroulant la boucle 4 fois
@@ -32,19 +33,38 @@
 void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, uint32_t nb_MCU_V)
 {
    uint8_t *MCU_Y, *MCU_Cr, *MCU_Cb;
-   uint8_t index, i, j;
+   uint8_t index, i, j, k;
+   int32_t R, G, B;
+   uint32_t ARGB;
    /* TODO: vos déclarations de variables ici */
-   ... /* FIXME: pour être certain que ça ne compile pas :) */
 
+   /* Récupération des pointeurs sur les macro-bloc 8x8 de lumimance, chrominance rouge, chrominance bleue */
    MCU_Y = YCrCb_MCU[0];
    MCU_Cr = YCrCb_MCU[2];
    MCU_Cb = YCrCb_MCU[1];
 
    for (i = 0; i < 8 * nb_MCU_V; i++) {
-      for (j = 0; j < 8 * nb_MCU_H; /* TODO: a ajuster, ... */) {
+      for (j = 0; j < 8 * nb_MCU_H; j += 4) {
          /* On travaille à présent sur des vecteurs de 4 éléments d'un coup */
-         /* TODO: juste fait le ! */
-         index = i * (8 * nb_MCU_H) + ...;
+         for (k = 0; k < 4; k++) {
+            index = i * (8 * nb_MCU_H) + j + k;
+
+            /* Calcul de la conversion pixel par pixel */
+            R = (MCU_Cr[index] - 128) * 1.402f + MCU_Y[index];
+            B = (MCU_Cb[index] - 128) * 1.7772f + MCU_Y[index];
+            G = MCU_Y[index] - (MCU_Cb[index] - 128) * 0.381834f - (MCU_Cr[index] - 128) * 0.71414f;
+
+            /* Saturation des valeurs pour se ramener à 32 bits pour Alpha, Red, Green, Blue */
+            if (R > 255) R = 255;
+            if (R < 0)   R = 0;
+            if (G > 255) G = 255;
+            if (G < 0)   G = 0;
+            if (B > 255) B = 255;
+            if (B < 0)   B = 0;
+            ARGB = ((R & 0xFF) << 16) | ((G & 0xFF) << 8) | (B & 0xFF);
+            /* Écriture du pixel dans le macro-bloc de sortie */
+            RGB_MCU[index] = ARGB;
+         }
       }
    }
 }
