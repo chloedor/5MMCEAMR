@@ -42,7 +42,7 @@ void screen_init(uint32_t width, uint32_t height)
 
 	int width_int = width , height_int = height ;
    /* Initialize defaults, Video and Audio */
-   if ((SDL_Init(SDL_INIT_VIDEO) == -1)) { 
+   if (SDL_Init(SDL_INIT_VIDEO) == -1) { 
       printf("Could not initialize SDL: %s.\n", SDL_GetError());
       exit(-1);
    }
@@ -87,7 +87,7 @@ int screen_exit()
 	SDL_Event event ;
 	while(initialized) {
 		SDL_PollEvent(&event) ;
-		if ((event.type == SDL_QUIT )) {
+		if (event.type == SDL_QUIT ) {
 			SDL_Quit();
 			return 1;
 		}
@@ -131,7 +131,7 @@ int screen_refresh()
 		printf("Could not refresh screen: %s\n.", SDL_GetError() );
 	}
 	IPRINTF("[screen]: instantaneous fps is %0.2f\n", 1000.00f / (SDL_GetTicks() - old_time)) ;
-	printf("[screen] : framerate is %0.2ffps, computed one image in %lu clock cycles\n", 1000.00f / (SDL_GetTicks() - old_time), finish_clock - old_clock) ;
+	printf("[screen] : framerate is %0.2ffps, computed one image in %llu clock cycles\n", 1000.00f / (SDL_GetTicks() - old_time), finish_clock - old_clock) ;
 	old_time = SDL_GetTicks() ;
 	old_clock = _rdtsc() ;
 	// In this case, SDL is 
