@@ -10,7 +10,7 @@
 
 %SUITES = ();
 
-$SUITES{'isi2022'}      =
+$SUITES{'seoc'}      =
 'SHORT_MOBILE-56
 SHORT_MOBILE-59
 SHORT_MOBILE-57
