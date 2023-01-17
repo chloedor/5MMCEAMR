@@ -30,7 +30,7 @@
 #include <stdalign.h> 
 #include <xmmintrin.h>
 
-uint8_t test = 1; 
+uint8_t test = 0; 
 
 /* Fonction d'affichage de variables de __m128x sous divers formats */
 void p128_x(__m128 fl, __m128i in, __m128i sh, __m128i ch)
