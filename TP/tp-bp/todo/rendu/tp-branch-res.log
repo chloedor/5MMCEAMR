@@ -1,0 +1,709 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.11.11)  11 NOV 2022 14:43
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**tp-branch-res.tex
+(./tp-branch-res.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count175
+\Gm@cntv=\count176
+\c@Gm@tempcnt=\count177
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count178
+\l__pdf_internal_box=\box45
+)
+(./tp-branch-res.aux)
+\openout1 = `tp-branch-res.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count179
+\scratchdimen=\dimen145
+\scratchbox=\box46
+\nofMPsegments=\count180
+\nofMParguments=\count181
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count182
+\MPscratchDim=\dimen146
+\MPnumerator=\count183
+\makeMPintoPDFobject=\count184
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 658.28194pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=658.28194pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+<courbes/bimodal/graph_1.pdf, id=1, 417.75258pt x 328.53627pt>
+File: courbes/bimodal/graph_1.pdf Graphic file (type pdf)
+<use courbes/bimodal/graph_1.pdf>
+Package pdftex.def Info: courbes/bimodal/graph_1.pdf  used on input line 27.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/bimodal/graph_2.pdf, id=2, 417.75258pt x 328.53627pt>
+File: courbes/bimodal/graph_2.pdf Graphic file (type pdf)
+<use courbes/bimodal/graph_2.pdf>
+Package pdftex.def Info: courbes/bimodal/graph_2.pdf  used on input line 28.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/bimodal/graph_3.pdf, id=3, 417.75258pt x 328.53627pt>
+File: courbes/bimodal/graph_3.pdf Graphic file (type pdf)
+<use courbes/bimodal/graph_3.pdf>
+Package pdftex.def Info: courbes/bimodal/graph_3.pdf  used on input line 29.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/bimodal/graph_4.pdf, id=4, 417.75258pt x 328.53627pt>
+File: courbes/bimodal/graph_4.pdf Graphic file (type pdf)
+<use courbes/bimodal/graph_4.pdf>
+Package pdftex.def Info: courbes/bimodal/graph_4.pdf  used on input line 30.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 27--31
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 27--31
+[] [] 
+ []
+
+<courbes/gshare/hmax/graph_1.pdf, id=5, 417.75258pt x 328.53627pt>
+File: courbes/gshare/hmax/graph_1.pdf Graphic file (type pdf)
+<use courbes/gshare/hmax/graph_1.pdf>
+Package pdftex.def Info: courbes/gshare/hmax/graph_1.pdf  used on input line 36
+.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/hmax/graph_2.pdf, id=6, 417.75258pt x 328.53627pt>
+File: courbes/gshare/hmax/graph_2.pdf Graphic file (type pdf)
+<use courbes/gshare/hmax/graph_2.pdf>
+Package pdftex.def Info: courbes/gshare/hmax/graph_2.pdf  used on input line 37
+.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/hmax/graph_3.pdf, id=7, 417.75258pt x 328.53627pt>
+File: courbes/gshare/hmax/graph_3.pdf Graphic file (type pdf)
+<use courbes/gshare/hmax/graph_3.pdf>
+Package pdftex.def Info: courbes/gshare/hmax/graph_3.pdf  used on input line 38
+.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/hmax/graph_4.pdf, id=8, 417.75258pt x 328.53627pt>
+File: courbes/gshare/hmax/graph_4.pdf Graphic file (type pdf)
+<use courbes/gshare/hmax/graph_4.pdf>
+Package pdftex.def Info: courbes/gshare/hmax/graph_4.pdf  used on input line 39
+.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 36--40
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 36--40
+[] [] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./courbes/bimodal/graph_1.
+pdf> <./courbes/bimodal/graph_2.pdf> <./courbes/bimodal/graph_3.pdf> <./courbes
+/bimodal/graph_4.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+<courbes/gshare/h4/graph_1.pdf, id=243, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h4/graph_1.pdf Graphic file (type pdf)
+<use courbes/gshare/h4/graph_1.pdf>
+Package pdftex.def Info: courbes/gshare/h4/graph_1.pdf  used on input line 53.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h4/graph_2.pdf, id=244, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h4/graph_2.pdf Graphic file (type pdf)
+<use courbes/gshare/h4/graph_2.pdf>
+Package pdftex.def Info: courbes/gshare/h4/graph_2.pdf  used on input line 54.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h4/graph_3.pdf, id=245, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h4/graph_3.pdf Graphic file (type pdf)
+<use courbes/gshare/h4/graph_3.pdf>
+Package pdftex.def Info: courbes/gshare/h4/graph_3.pdf  used on input line 55.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h4/graph_4.pdf, id=246, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h4/graph_4.pdf Graphic file (type pdf)
+<use courbes/gshare/h4/graph_4.pdf>
+Package pdftex.def Info: courbes/gshare/h4/graph_4.pdf  used on input line 56.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 53--57
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 53--57
+[] [] 
+ []
+
+[2 <./courbes/gshare/hmax/graph_1.pdf> <./courbes/gshare/hmax/graph_2.pdf> <./c
+ourbes/gshare/hmax/graph_3.pdf> <./courbes/gshare/hmax/graph_4.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 58.
+<courbes/gshare/h5/graph_1.pdf, id=477, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h5/graph_1.pdf Graphic file (type pdf)
+<use courbes/gshare/h5/graph_1.pdf>
+Package pdftex.def Info: courbes/gshare/h5/graph_1.pdf  used on input line 66.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h5/graph_2.pdf, id=478, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h5/graph_2.pdf Graphic file (type pdf)
+<use courbes/gshare/h5/graph_2.pdf>
+Package pdftex.def Info: courbes/gshare/h5/graph_2.pdf  used on input line 67.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h5/graph_3.pdf, id=479, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h5/graph_3.pdf Graphic file (type pdf)
+<use courbes/gshare/h5/graph_3.pdf>
+Package pdftex.def Info: courbes/gshare/h5/graph_3.pdf  used on input line 68.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h5/graph_4.pdf, id=480, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h5/graph_4.pdf Graphic file (type pdf)
+<use courbes/gshare/h5/graph_4.pdf>
+Package pdftex.def Info: courbes/gshare/h5/graph_4.pdf  used on input line 69.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 66--70
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 66--70
+[] [] 
+ []
+
+[3 <./courbes/gshare/h4/graph_1.pdf> <./courbes/gshare/h4/graph_2.pdf> <./courb
+es/gshare/h4/graph_3.pdf> <./courbes/gshare/h4/graph_4.pdf>]
+<courbes/gshare/h6/graph_1.pdf, id=711, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h6/graph_1.pdf Graphic file (type pdf)
+<use courbes/gshare/h6/graph_1.pdf>
+Package pdftex.def Info: courbes/gshare/h6/graph_1.pdf  used on input line 75.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h6/graph_2.pdf, id=712, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h6/graph_2.pdf Graphic file (type pdf)
+<use courbes/gshare/h6/graph_2.pdf>
+Package pdftex.def Info: courbes/gshare/h6/graph_2.pdf  used on input line 76.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h6/graph_3.pdf, id=713, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h6/graph_3.pdf Graphic file (type pdf)
+<use courbes/gshare/h6/graph_3.pdf>
+Package pdftex.def Info: courbes/gshare/h6/graph_3.pdf  used on input line 77.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/gshare/h6/graph_4.pdf, id=714, 417.75258pt x 328.53627pt>
+File: courbes/gshare/h6/graph_4.pdf Graphic file (type pdf)
+<use courbes/gshare/h6/graph_4.pdf>
+Package pdftex.def Info: courbes/gshare/h6/graph_4.pdf  used on input line 78.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 75--79
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 75--79
+[] [] 
+ []
+
+[4 <./courbes/gshare/h5/graph_1.pdf> <./courbes/gshare/h5/graph_2.pdf> <./courb
+es/gshare/h5/graph_3.pdf> <./courbes/gshare/h5/graph_4.pdf>]
+<courbes/local/h4/graph_1.pdf, id=943, 417.75258pt x 328.53627pt>
+File: courbes/local/h4/graph_1.pdf Graphic file (type pdf)
+<use courbes/local/h4/graph_1.pdf>
+Package pdftex.def Info: courbes/local/h4/graph_1.pdf  used on input line 86.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h4/graph_2.pdf, id=944, 417.75258pt x 328.53627pt>
+File: courbes/local/h4/graph_2.pdf Graphic file (type pdf)
+<use courbes/local/h4/graph_2.pdf>
+Package pdftex.def Info: courbes/local/h4/graph_2.pdf  used on input line 87.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h4/graph_3.pdf, id=945, 417.75258pt x 328.53627pt>
+File: courbes/local/h4/graph_3.pdf Graphic file (type pdf)
+<use courbes/local/h4/graph_3.pdf>
+Package pdftex.def Info: courbes/local/h4/graph_3.pdf  used on input line 88.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h4/graph_4.pdf, id=946, 417.75258pt x 328.53627pt>
+File: courbes/local/h4/graph_4.pdf Graphic file (type pdf)
+<use courbes/local/h4/graph_4.pdf>
+Package pdftex.def Info: courbes/local/h4/graph_4.pdf  used on input line 89.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 86--90
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 86--90
+[] [] 
+ []
+
+[5 <./courbes/gshare/h6/graph_1.pdf> <./courbes/gshare/h6/graph_2.pdf> <./courb
+es/gshare/h6/graph_3.pdf> <./courbes/gshare/h6/graph_4.pdf>]
+<courbes/local/h5/graph_1.pdf, id=1176, 417.75258pt x 328.53627pt>
+File: courbes/local/h5/graph_1.pdf Graphic file (type pdf)
+<use courbes/local/h5/graph_1.pdf>
+Package pdftex.def Info: courbes/local/h5/graph_1.pdf  used on input line 97.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h5/graph_2.pdf, id=1177, 417.75258pt x 328.53627pt>
+File: courbes/local/h5/graph_2.pdf Graphic file (type pdf)
+<use courbes/local/h5/graph_2.pdf>
+Package pdftex.def Info: courbes/local/h5/graph_2.pdf  used on input line 98.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h5/graph_3.pdf, id=1178, 417.75258pt x 328.53627pt>
+File: courbes/local/h5/graph_3.pdf Graphic file (type pdf)
+<use courbes/local/h5/graph_3.pdf>
+Package pdftex.def Info: courbes/local/h5/graph_3.pdf  used on input line 99.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h5/graph_4.pdf, id=1179, 417.75258pt x 328.53627pt>
+File: courbes/local/h5/graph_4.pdf Graphic file (type pdf)
+<use courbes/local/h5/graph_4.pdf>
+Package pdftex.def Info: courbes/local/h5/graph_4.pdf  used on input line 100.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 97--101
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 97--101
+[] [] 
+ []
+
+[6 <./courbes/local/h4/graph_1.pdf> <./courbes/local/h4/graph_2.pdf> <./courbes
+/local/h4/graph_3.pdf> <./courbes/local/h4/graph_4.pdf>]
+<courbes/local/h6/graph_1.pdf, id=1410, 417.75258pt x 328.53627pt>
+File: courbes/local/h6/graph_1.pdf Graphic file (type pdf)
+<use courbes/local/h6/graph_1.pdf>
+Package pdftex.def Info: courbes/local/h6/graph_1.pdf  used on input line 106.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h6/graph_2.pdf, id=1411, 417.75258pt x 328.53627pt>
+File: courbes/local/h6/graph_2.pdf Graphic file (type pdf)
+<use courbes/local/h6/graph_2.pdf>
+Package pdftex.def Info: courbes/local/h6/graph_2.pdf  used on input line 107.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h6/graph_3.pdf, id=1412, 417.75258pt x 328.53627pt>
+File: courbes/local/h6/graph_3.pdf Graphic file (type pdf)
+<use courbes/local/h6/graph_3.pdf>
+Package pdftex.def Info: courbes/local/h6/graph_3.pdf  used on input line 108.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/local/h6/graph_4.pdf, id=1413, 417.75258pt x 328.53627pt>
+File: courbes/local/h6/graph_4.pdf Graphic file (type pdf)
+<use courbes/local/h6/graph_4.pdf>
+Package pdftex.def Info: courbes/local/h6/graph_4.pdf  used on input line 109.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 106--110
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 106--110
+[] [] 
+ []
+
+[7 <./courbes/local/h5/graph_1.pdf> <./courbes/local/h5/graph_2.pdf> <./courbes
+/local/h5/graph_3.pdf> <./courbes/local/h5/graph_4.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+<courbes/meta/h4/graph_1.pdf, id=1643, 417.75258pt x 328.53627pt>
+File: courbes/meta/h4/graph_1.pdf Graphic file (type pdf)
+<use courbes/meta/h4/graph_1.pdf>
+Package pdftex.def Info: courbes/meta/h4/graph_1.pdf  used on input line 119.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h4/graph_2.pdf, id=1644, 417.75258pt x 328.53627pt>
+File: courbes/meta/h4/graph_2.pdf Graphic file (type pdf)
+<use courbes/meta/h4/graph_2.pdf>
+Package pdftex.def Info: courbes/meta/h4/graph_2.pdf  used on input line 120.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h4/graph_3.pdf, id=1645, 417.75258pt x 328.53627pt>
+File: courbes/meta/h4/graph_3.pdf Graphic file (type pdf)
+<use courbes/meta/h4/graph_3.pdf>
+Package pdftex.def Info: courbes/meta/h4/graph_3.pdf  used on input line 121.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h4/graph_4.pdf, id=1646, 417.75258pt x 328.53627pt>
+File: courbes/meta/h4/graph_4.pdf Graphic file (type pdf)
+<use courbes/meta/h4/graph_4.pdf>
+Package pdftex.def Info: courbes/meta/h4/graph_4.pdf  used on input line 122.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 119--123
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 119--123
+[] [] 
+ []
+
+[8 <./courbes/local/h6/graph_1.pdf> <./courbes/local/h6/graph_2.pdf> <./courbes
+/local/h6/graph_3.pdf> <./courbes/local/h6/graph_4.pdf>]
+<courbes/meta/h5/graph_1.pdf, id=1875, 417.75258pt x 328.53627pt>
+File: courbes/meta/h5/graph_1.pdf Graphic file (type pdf)
+<use courbes/meta/h5/graph_1.pdf>
+Package pdftex.def Info: courbes/meta/h5/graph_1.pdf  used on input line 132.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h5/graph_2.pdf, id=1876, 417.75258pt x 328.53627pt>
+File: courbes/meta/h5/graph_2.pdf Graphic file (type pdf)
+<use courbes/meta/h5/graph_2.pdf>
+Package pdftex.def Info: courbes/meta/h5/graph_2.pdf  used on input line 133.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h5/graph_3.pdf, id=1877, 417.75258pt x 328.53627pt>
+File: courbes/meta/h5/graph_3.pdf Graphic file (type pdf)
+<use courbes/meta/h5/graph_3.pdf>
+Package pdftex.def Info: courbes/meta/h5/graph_3.pdf  used on input line 134.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h5/graph_4.pdf, id=1878, 417.75258pt x 328.53627pt>
+File: courbes/meta/h5/graph_4.pdf Graphic file (type pdf)
+<use courbes/meta/h5/graph_4.pdf>
+Package pdftex.def Info: courbes/meta/h5/graph_4.pdf  used on input line 135.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 132--136
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 132--136
+[] [] 
+ []
+
+[9 <./courbes/meta/h4/graph_1.pdf> <./courbes/meta/h4/graph_2.pdf> <./courbes/m
+eta/h4/graph_3.pdf> <./courbes/meta/h4/graph_4.pdf>]
+<courbes/meta/h6/graph_1.pdf, id=2108, 417.75258pt x 328.53627pt>
+File: courbes/meta/h6/graph_1.pdf Graphic file (type pdf)
+<use courbes/meta/h6/graph_1.pdf>
+Package pdftex.def Info: courbes/meta/h6/graph_1.pdf  used on input line 141.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h6/graph_2.pdf, id=2109, 417.75258pt x 328.53627pt>
+File: courbes/meta/h6/graph_2.pdf Graphic file (type pdf)
+<use courbes/meta/h6/graph_2.pdf>
+Package pdftex.def Info: courbes/meta/h6/graph_2.pdf  used on input line 142.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h6/graph_3.pdf, id=2110, 417.75258pt x 328.53627pt>
+File: courbes/meta/h6/graph_3.pdf Graphic file (type pdf)
+<use courbes/meta/h6/graph_3.pdf>
+Package pdftex.def Info: courbes/meta/h6/graph_3.pdf  used on input line 143.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/meta/h6/graph_4.pdf, id=2111, 417.75258pt x 328.53627pt>
+File: courbes/meta/h6/graph_4.pdf Graphic file (type pdf)
+<use courbes/meta/h6/graph_4.pdf>
+Package pdftex.def Info: courbes/meta/h6/graph_4.pdf  used on input line 144.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 141--145
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 141--145
+[] [] 
+ []
+
+[10 <./courbes/meta/h5/graph_1.pdf> <./courbes/meta/h5/graph_2.pdf> <./courbes/
+meta/h5/graph_3.pdf> <./courbes/meta/h5/graph_4.pdf>]
+<courbes/perceptron/h4/graph_1.pdf, id=2341, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h4/graph_1.pdf Graphic file (type pdf)
+<use courbes/perceptron/h4/graph_1.pdf>
+Package pdftex.def Info: courbes/perceptron/h4/graph_1.pdf  used on input line 
+152.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h4/graph_2.pdf, id=2342, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h4/graph_2.pdf Graphic file (type pdf)
+<use courbes/perceptron/h4/graph_2.pdf>
+Package pdftex.def Info: courbes/perceptron/h4/graph_2.pdf  used on input line 
+153.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h4/graph_3.pdf, id=2343, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h4/graph_3.pdf Graphic file (type pdf)
+<use courbes/perceptron/h4/graph_3.pdf>
+Package pdftex.def Info: courbes/perceptron/h4/graph_3.pdf  used on input line 
+154.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h4/graph_4.pdf, id=2344, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h4/graph_4.pdf Graphic file (type pdf)
+<use courbes/perceptron/h4/graph_4.pdf>
+Package pdftex.def Info: courbes/perceptron/h4/graph_4.pdf  used on input line 
+155.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 152--156
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 152--156
+[] [] 
+ []
+
+[11 <./courbes/meta/h6/graph_1.pdf> <./courbes/meta/h6/graph_2.pdf> <./courbes/
+meta/h6/graph_3.pdf> <./courbes/meta/h6/graph_4.pdf>]
+<courbes/perceptron/h5/graph_1.pdf, id=2573, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h5/graph_1.pdf Graphic file (type pdf)
+<use courbes/perceptron/h5/graph_1.pdf>
+Package pdftex.def Info: courbes/perceptron/h5/graph_1.pdf  used on input line 
+163.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h5/graph_2.pdf, id=2574, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h5/graph_2.pdf Graphic file (type pdf)
+<use courbes/perceptron/h5/graph_2.pdf>
+Package pdftex.def Info: courbes/perceptron/h5/graph_2.pdf  used on input line 
+164.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h5/graph_3.pdf, id=2575, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h5/graph_3.pdf Graphic file (type pdf)
+<use courbes/perceptron/h5/graph_3.pdf>
+Package pdftex.def Info: courbes/perceptron/h5/graph_3.pdf  used on input line 
+165.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h5/graph_4.pdf, id=2576, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h5/graph_4.pdf Graphic file (type pdf)
+<use courbes/perceptron/h5/graph_4.pdf>
+Package pdftex.def Info: courbes/perceptron/h5/graph_4.pdf  used on input line 
+166.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 163--167
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 163--167
+[] [] 
+ []
+
+[12 <./courbes/perceptron/h4/graph_1.pdf> <./courbes/perceptron/h4/graph_2.pdf>
+ <./courbes/perceptron/h4/graph_3.pdf> <./courbes/perceptron/h4/graph_4.pdf>]
+<courbes/perceptron/h6/graph_1.pdf, id=2806, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h6/graph_1.pdf Graphic file (type pdf)
+<use courbes/perceptron/h6/graph_1.pdf>
+Package pdftex.def Info: courbes/perceptron/h6/graph_1.pdf  used on input line 
+172.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h6/graph_2.pdf, id=2807, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h6/graph_2.pdf Graphic file (type pdf)
+<use courbes/perceptron/h6/graph_2.pdf>
+Package pdftex.def Info: courbes/perceptron/h6/graph_2.pdf  used on input line 
+173.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h6/graph_3.pdf, id=2808, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h6/graph_3.pdf Graphic file (type pdf)
+<use courbes/perceptron/h6/graph_3.pdf>
+Package pdftex.def Info: courbes/perceptron/h6/graph_3.pdf  used on input line 
+174.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h6/graph_4.pdf, id=2809, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h6/graph_4.pdf Graphic file (type pdf)
+<use courbes/perceptron/h6/graph_4.pdf>
+Package pdftex.def Info: courbes/perceptron/h6/graph_4.pdf  used on input line 
+175.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 172--176
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 172--176
+[] [] 
+ []
+
+[13 <./courbes/perceptron/h5/graph_1.pdf> <./courbes/perceptron/h5/graph_2.pdf>
+ <./courbes/perceptron/h5/graph_3.pdf> <./courbes/perceptron/h5/graph_4.pdf>]
+Overfull \hbox (28.79828pt too wide) in paragraph at lines 177--178
+[]\OT1/cmr/m/n/10 Ce per-cep-tron est sim-i-laire aux per-cep-trons pr^^Sec^^Se
+dents. Cepen-dant, l'^^Sechantillon \OT1/cmr/m/it/10 SHORT[]MOBILE[]48
+ []
+
+<courbes/perceptron/h59/graph_1.pdf, id=3039, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h59/graph_1.pdf Graphic file (type pdf)
+<use courbes/perceptron/h59/graph_1.pdf>
+Package pdftex.def Info: courbes/perceptron/h59/graph_1.pdf  used on input line
+ 183.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h59/graph_2.pdf, id=3040, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h59/graph_2.pdf Graphic file (type pdf)
+<use courbes/perceptron/h59/graph_2.pdf>
+Package pdftex.def Info: courbes/perceptron/h59/graph_2.pdf  used on input line
+ 184.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h59/graph_3.pdf, id=3041, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h59/graph_3.pdf Graphic file (type pdf)
+<use courbes/perceptron/h59/graph_3.pdf>
+Package pdftex.def Info: courbes/perceptron/h59/graph_3.pdf  used on input line
+ 185.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+<courbes/perceptron/h59/graph_4.pdf, id=3042, 417.75258pt x 328.53627pt>
+File: courbes/perceptron/h59/graph_4.pdf Graphic file (type pdf)
+<use courbes/perceptron/h59/graph_4.pdf>
+Package pdftex.def Info: courbes/perceptron/h59/graph_4.pdf  used on input line
+ 186.
+(pdftex.def)             Requested size: 213.39568pt x 167.82198pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 183--187
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 183--187
+[] [] 
+ []
+
+[14 <./courbes/perceptron/h6/graph_1.pdf> <./courbes/perceptron/h6/graph_2.pdf>
+ <./courbes/perceptron/h6/graph_3.pdf> <./courbes/perceptron/h6/graph_4.pdf>]
+[15 <./courbes/perceptron/h59/graph_1.pdf> <./courbes/perceptron/h59/graph_2.pd
+f> <./courbes/perceptron/h59/graph_3.pdf> <./courbes/perceptron/h59/graph_4.pdf
+>] [16] (./tp-branch-res.aux) ) 
+Here is how much of TeX's memory you used:
+ 2041 strings out of 483183
+ 36552 string characters out of 5966291
+ 260973 words of memory out of 5000000
+ 17046 multiletter control sequences out of 15000+600000
+ 537274 words of font info for 40 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 30i,7n,25p,684b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/leo/.texlive2019/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb>
+Output written on tp-branch-res.pdf (16 pages, 1129291 bytes).
+PDF statistics:
+ 3546 PDF objects out of 3580 (max. 8388607)
+ 374 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -28,7 +28,19 @@ class PREDICTOR {
   */
  private:
    uint32_t *table;   // table contenant les compteurs à saturation
+   uint32_t **doubleTable; // table pour le local doubleTable[history][PC & pcmask]
    uint32_t pcmask;   // masque pour n'accéder qu'aux bits significatifs de PC
+   uint32_t hmask;
+   uint32_t perceptronsMask;
+   uint32_t hbits;
+   uint32_t history;  // historique global
+   int32_t y;
+   uint8_t *historyTable; //historique local [PC & pcmask]
+   int32_t **perceptronsTable;
+   PredictorType ptype;
+   State state;
+   bool local;
+   bool global;
 
  public:
    uint32_t nentries; // nombre d'entrées dans la table
@@ -42,5 +54,17 @@ class PREDICTOR {
    void TrackOtherInst(UINT64 PC, OpType opType, bool branchDir, UINT64 branchTarget);
 
    // Contestants can define their own functions below
+
+   bool GetPredictionBimodal(UINT64 PC);
+   bool GetPredictionGshare(UINT64 PC);
+   bool GetPredictionLocalPredictor(UINT64 PC);
+   bool GetPredictionMeta(UINT64 PC);
+   bool GetPredictionPerceptron(UINT64 PC);
+
+   void UpdatePredictorBimodal(UINT64 PC, OpType opType, bool resolveDir, bool predDir, UINT64 branchTarget);
+   void UpdatePredictorGshare(UINT64 PC, OpType opType, bool resolveDir, bool predDir, UINT64 branchTarget);
+   void UpdatePredictorLocalPredictor(UINT64 PC, OpType opType, bool resolveDir, bool predDir, UINT64 branchTarget);
+   void UpdatePredictorMeta(UINT64 PC, OpType opType, bool resolveDir, bool predDir, UINT64 branchTarget);
+   void UpdatePredictorPerceptron(UINT64 PC, OpType opType, bool resolveDir, bool predDir, UINT64 branchTarget); 
 };
 #endif

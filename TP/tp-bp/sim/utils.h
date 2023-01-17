@@ -25,6 +25,21 @@ using namespace std;
 #define FAILURE 0
 #define SUCCESS 1
 
+typedef enum {
+  BIMODAL_PREDICTOR = 0,
+  GSHARE_PREDICTOR = 1,
+  LOCAL_PREDICTOR = 2,
+  META_PREDICTOR = 3,
+  PERCEPTRON = 4,
+}PredictorType;
+
+typedef enum {
+   G1 = 0,
+   G0 = 1,
+   L0 = 2,
+   L1 = 3
+} State;
+
 //JD2_2_2016
 //typedef enum {
 //  OPTYPE_OP               =2,
