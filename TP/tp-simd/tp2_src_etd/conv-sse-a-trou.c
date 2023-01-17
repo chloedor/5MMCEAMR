@@ -93,9 +93,9 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
          if(test) {
             printf("%hhu\n%hhu\n%hhu\n%hhu\n", MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
          }
-         Y  = _mm_set_ps(MCU_Y [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
-         Cb = _mm_set_ps(MCU_Cb [index + 0], MCU_Cb [index + 1], MCU_Cb [index + 2], MCU_Cb [index + 3]);
-         Cr = _mm_set_ps(MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
+         Y  = _mm_setr_ps(MCU_Y [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
+         Cb = _mm_setr_ps(MCU_Cb [index + 0], MCU_Cb [index + 1], MCU_Cb [index + 2], MCU_Cb [index + 3]);
+         Cr = _mm_setr_ps(MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
          if (test) {
             p128_x(Y, v0, v0, v0);
             p128_x(Cb, v0, v0, v0);            
@@ -159,9 +159,9 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           *    _mm_unpack...
           */
          __m128i tmp0, tmp1;
-         tmp0 = _mm_unpacklo_epi8(v0, Rc);
-         tmp1 = _mm_unpacklo_epi8(Gc, Bc);
-         ARGB = _mm_unpacklo_epi16(tmp0, tmp1);
+         tmp0 = _mm_unpacklo_epi8(Rc, v0);
+         tmp1 = _mm_unpacklo_epi8(Bc, Gc);
+         ARGB = _mm_unpacklo_epi16(tmp1, tmp0);
 
          if (test) {
             p128_x(Cr, tmp0, tmp0, tmp0);
