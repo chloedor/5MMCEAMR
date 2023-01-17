@@ -1,8 +1,8 @@
 INC = -I.
-CFLAGS = -g -O3 $(INC) -Wall -Werror -march=sandybridge
+CFLAGS = -g -O3 $(INC) -Wall -march=sandybridge
 LDFLAGS = -lSDL2
 
-CONV=conv-xxx
+CONV=conv-int
 
 OBJ_FILES = main.o idct.o screen.o iqzz.o upsampler.o skip_segment.o huffman.o unpack_block.o $(CONV).o
 

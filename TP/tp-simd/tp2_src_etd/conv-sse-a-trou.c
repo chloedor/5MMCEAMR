@@ -62,7 +62,6 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
    uint8_t *MCU_Y, *MCU_Cr, *MCU_Cb;
    uint8_t index, i, j;
    __m128  Rf, Gf, Bf, Y, Cr, Cb;
-   __m128 Cr_minus_128;
    __m128i ARGB, R, G, B;
    __m128i Rs, Gs, Bs;
    __m128i Rc, Gc, Bc;
@@ -74,7 +73,7 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
     */
    const __m128i v0         = _mm_set1_epi32(0);
    if (test){
-      p128_x(v0, v0, v0, v0);
+      p128_x(Rf, v0, v0, v0);
    }
 
    MCU_Y  = YCrCb_MCU[0];
@@ -91,13 +90,16 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           * instruction à utiliser
           *     _mm_set...
           */
+         if(test) {
+            printf("%hhu\n%hhu\n%hhu\n%hhu\n", MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
+         }
          Y  = _mm_set_ps(MCU_Y [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
-         Cb = _mm_set_ps(MCU_Cb [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
-         Cr = _mm_set_ps(MCU_Cr [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
+         Cb = _mm_set_ps(MCU_Cb [index + 0], MCU_Cb [index + 1], MCU_Cb [index + 2], MCU_Cb [index + 3]);
+         Cr = _mm_set_ps(MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
          if (test) {
-            p128_x(Y, Y, Y, Y);
-            p128_x(Cb, Cb, Cb, Cb);            
-            p128_x(Cr, Cr, Cr, Cr);
+            p128_x(Y, v0, v0, v0);
+            p128_x(Cb, v0, v0, v0);            
+            p128_x(Cr, v0, v0, v0);
          }
 
 
@@ -106,13 +108,20 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           *    aucune instruction sse explicite
           */
 
-         Rf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_epi32(128)),  _mm_set1_ps(1.402f)), Y);
-         Bf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_epi32(128)),  _mm_set1_ps(1.7772f)), Y);
-         Gf = _mm_sub_ps(_mm_sub_ps(Y, _mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_epi32(128)),  _mm_set1_ps(0.381834f))), _mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_epi32(128)),  _mm_set1_ps(0.71414f)));
+         Rf = (Cr - 128.0f) * 1.402f + Y;
+         Bf = (Cb - 128.0f) * 1.7772f + Y;
+         Gf = Y - (Cb - 128.0f) * 0.381834f - (Cr - 128.0f)*0.71414f;
+
+         /*
+         Rf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_ps(128.0)),  _mm_set1_ps(1.402f)), Y);
+         Bf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_ps(128.0)),  _mm_set1_ps(1.7772f)), Y);
+         Gf = _mm_sub_ps(_mm_sub_ps(Y, _mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_ps(128)),  _mm_set1_ps(0.381834f))), _mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_ps(128)),  _mm_set1_ps(0.71414f)));
+         */
+
          if (test) {
-            p128_x(Rf, Rf, Rf, Rf);
-            p128_x(Bf, Bf, Bf, Bf);            
-            p128_x(Gf, Gf, Gf, Gf);
+            p128_x(Rf, v0, v0, v0);
+            p128_x(Gf, v0, v0, v0);            
+            p128_x(Bf, v0, v0, v0);
          }
 
 
@@ -130,13 +139,19 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
          G = _mm_cvtps_epi32(Gf);
          B = _mm_cvtps_epi32(Bf);
 
-         Rs = _mm_packs_epi32(R, R);
-         Gs = _mm_packs_epi32(G, G);
-         Bs = _mm_packs_epi32(B, B);
+         Rs = _mm_packus_epi32(R, R);
+         Gs = _mm_packus_epi32(G, G);
+         Bs = _mm_packus_epi32(B, B);
 
-         Rc = _mm_packs_epi16(Rs, Rs);
-         Gc = _mm_packs_epi16(Gs, Gs);
-         Bc = _mm_packs_epi16(Bs, Bs);
+         Rc = _mm_packus_epi16(Rs, Rs);
+         Gc = _mm_packus_epi16(Gs, Gs);
+         Bc = _mm_packus_epi16(Bs, Bs);
+
+         if (test) {
+            p128_x(Cr, R, Rs, Rc);
+            p128_x(Cr, G, Gs, Gc);            
+            p128_x(Cr, B, Bs, Bc);
+         }
 
          /*
           * Transposition de la matrice d'octets, brillant !
@@ -144,16 +159,22 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           *    _mm_unpack...
           */
          __m128i tmp0, tmp1;
-         tmp0 = _mm_unpacklo_epi16(Rc, Rc);
-         tmp1 = _mm_unpacklo_epi16(Gc, Gc);
-         ARGB = ;
+         tmp0 = _mm_unpacklo_epi8(v0, Rc);
+         tmp1 = _mm_unpacklo_epi8(Gc, Bc);
+         ARGB = _mm_unpacklo_epi16(tmp0, tmp1);
+
+         if (test) {
+            p128_x(Cr, tmp0, tmp0, tmp0);
+            p128_x(Cr, tmp0, tmp1, tmp1);
+            p128_x(Cr, ARGB, ARGB, ARGB);
+         }
 
          /*
           * Écriture du résultat en mémoire
           * instruction à utiliser
           * _mm_store...
           */
-         /* _mm_store... */
+         _mm_storeu_si128((__m128i *)&RGB_MCU[index], ARGB);
          test = 0;
       }
    }

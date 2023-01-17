@@ -23,7 +23,28 @@ mjpeg-conv-unrolled4-float-a-trou : conv-unrolled4-float-a-trou.o $(OBJS)
 mjpeg-conv-sse-a-trou : conv-sse-a-trou.c $(OBJS)
 	gcc $(CFLAGS) -o $@ $^ -lSDL
 
+huffman.o : huffman.c
+	gcc $(CFLAGS) -c huffman.c -lSDL
+
+idct.o : idct.c
+	gcc $(CFLAGS) -c idct.c -lSDL
+
+iqzz.o : iqzz.c
+	gcc $(CFLAGS) -c iqzz.c -lSDL
+
+screen.o : screen.c
+	gcc $(CFLAGS) -c screen.c -lSDL
+
+skip_segment.o : skip_segment.c
+	gcc $(CFLAGS) -c skip_segment.c -lSDL
+
+unpack_block.o : unpack_block.c
+	gcc $(CFLAGS) -c unpack_block.c -lSDL
+
+upsampler.o : upsampler.c
+	gcc $(CFLAGS) -c upsampler.c -lSDL
+
 realclean : clean
 	rm -f mjpeg-float mjpeg-int mjpeg-mmx mjpeg-conv-unrolled4-float-a-trou mjpeg-conv-sse-a-trou
 clean :
-	rm -f conv-float.o conv-int.o conv-unrolled4-float-a-trou.o conv-sse-a-trou.o
+	rm -f conv-float.o conv-int.o conv-unrolled4-float-a-trou.o conv-sse-a-trou.o huffman.o idct.o iqzz.o screen.o skip_segment.o unpack_block.o upsampler.o
