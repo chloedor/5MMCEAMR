@@ -24,13 +24,8 @@
 #include "conv.h"
 #include "stdio.h"
 #include "utils.h"
-#include <emmintrin.h>
-#include <stdint.h>
 #include <x86intrin.h>
 #include <stdalign.h> 
-#include <xmmintrin.h>
-
-uint8_t test = 0; 
 
 /* Fonction d'affichage de variables de __m128x sous divers formats */
 void p128_x(__m128 fl, __m128i in, __m128i sh, __m128i ch)
@@ -66,64 +61,43 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
    __m128i Rs, Gs, Bs;
    __m128i Rc, Gc, Bc;
 
-   /* On définit le tableau de zéro dont on va avoir besoin */
+   /* On définit les tableaux de constantes dont on va avoir besoin */
    /*
     * Instructions à utiliser
     *     _mm_set... 
     */
-   const __m128i v0         = _mm_set1_epi32(0);
-   if (test){
-      p128_x(Rf, v0, v0, v0);
-   }
+   const __m128  v128f      = _mm_...(128.0f);
+   const __m128  v1_402f    = _mm_...(1.402f);
+   const __m128  v1_7772f   = _mm_...(1.7772f);
+   const __m128  v0_381834f = _mm_...(0.381834f);
+   const __m128  v0_71414f  = _mm_...(0.71414f);
+   const __m128i v0         = _mm_...(0);
 
    MCU_Y  = YCrCb_MCU[0];
    MCU_Cb = YCrCb_MCU[1];
    MCU_Cr = YCrCb_MCU[2];
 
    for (i = 0; i < 8 * nb_MCU_V; i++) {
-      for (j = 0; j < 8 * nb_MCU_H; j += 4) {
+      for (j = 0; j < 8 * nb_MCU_H; /* TODO: a ajuster, ... */) {
          /* On travaille à présent sur des vecteurs de 4 éléments d'un coup */
-         index = i * (8 * nb_MCU_H) + j;
+         index = i * (8 * nb_MCU_H) + ...;
 
          /*
           * Chargement des macro-blocs:
           * instruction à utiliser
           *     _mm_set...
           */
-         if(test) {
-            printf("%hhu\n%hhu\n%hhu\n%hhu\n", MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
-         }
-         Y  = _mm_set_ps(MCU_Y [index + 0], MCU_Y [index + 1], MCU_Y [index + 2], MCU_Y [index + 3]);
-         Cb = _mm_set_ps(MCU_Cb [index + 0], MCU_Cb [index + 1], MCU_Cb [index + 2], MCU_Cb [index + 3]);
-         Cr = _mm_set_ps(MCU_Cr [index + 0], MCU_Cr [index + 1], MCU_Cr [index + 2], MCU_Cr [index + 3]);
-         if (test) {
-            p128_x(Y, v0, v0, v0);
-            p128_x(Cb, v0, v0, v0);            
-            p128_x(Cr, v0, v0, v0);
-         }
-
+         Y  = _mm_...(MCU_Y [index + ...], ..., ..., ...);
+         Cb = _mm_...(MCU_Cb[index + ...], ..., ..., ...);
+         Cr = _mm_...(MCU_Cr[index + ...], ..., ..., ...);
 
          /*
           * Calcul de la conversion YCrCb vers RGB:
           *    aucune instruction sse explicite
           */
-
-         Rf = (Cr - 128.0f) * 1.402f + Y;
-         Bf = (Cb - 128.0f) * 1.7772f + Y;
-         Gf = Y - (Cb - 128.0f) * 0.381834f - (Cr - 128.0f)*0.71414f;
-
-         /*
-         Rf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_ps(128.0)),  _mm_set1_ps(1.402f)), Y);
-         Bf = _mm_add_ps(_mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_ps(128.0)),  _mm_set1_ps(1.7772f)), Y);
-         Gf = _mm_sub_ps(_mm_sub_ps(Y, _mm_mul_ps(_mm_sub_ps(Cb, _mm_set1_ps(128)),  _mm_set1_ps(0.381834f))), _mm_mul_ps(_mm_sub_ps(Cr, _mm_set1_ps(128)),  _mm_set1_ps(0.71414f)));
-         */
-
-         if (test) {
-            p128_x(Rf, v0, v0, v0);
-            p128_x(Gf, v0, v0, v0);            
-            p128_x(Bf, v0, v0, v0);
-         }
-
+         Rf = ...;
+         Bf = ...;
+         Gf = ...;
 
          /*
           * Conversion en entier avec calcul de la saturation:
@@ -135,23 +109,17 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           *    _mm_cvt...
           *    _mm_pack...
           */
-         R = _mm_cvtps_epi32(Rf);
-         G = _mm_cvtps_epi32(Gf);
-         B = _mm_cvtps_epi32(Bf);
+         R = ...
+         G = ...
+         B = ...
 
-         Rs = _mm_packus_epi32(R, R);
-         Gs = _mm_packus_epi32(G, G);
-         Bs = _mm_packus_epi32(B, B);
+         Rs = ...
+         Gs = ...
+         Bs = ...
 
-         Rc = _mm_packus_epi16(Rs, Rs);
-         Gc = _mm_packus_epi16(Gs, Gs);
-         Bc = _mm_packus_epi16(Bs, Bs);
-
-         if (test) {
-            p128_x(Cr, R, Rs, Rc);
-            p128_x(Cr, G, Gs, Gc);            
-            p128_x(Cr, B, Bs, Bc);
-         }
+         Rc = ...
+         Gc = ...
+         Bc = ...
 
          /*
           * Transposition de la matrice d'octets, brillant !
@@ -159,23 +127,16 @@ void YCrCb_to_ARGB(uint8_t *YCrCb_MCU[3], uint32_t *RGB_MCU, uint32_t nb_MCU_H, 
           *    _mm_unpack...
           */
          __m128i tmp0, tmp1;
-         tmp0 = _mm_unpacklo_epi8(v0, Rc);
-         tmp1 = _mm_unpacklo_epi8(Gc, Bc);
-         ARGB = _mm_unpacklo_epi16(tmp0, tmp1);
-
-         if (test) {
-            p128_x(Cr, tmp0, tmp0, tmp0);
-            p128_x(Cr, tmp0, tmp1, tmp1);
-            p128_x(Cr, ARGB, ARGB, ARGB);
-         }
+         tmp0 = ...
+         tmp1 = ...
+         ARGB = ...
 
          /*
           * Écriture du résultat en mémoire
           * instruction à utiliser
           * _mm_store...
           */
-         _mm_storeu_si128((__m128i *)&RGB_MCU[index], ARGB);
-         test = 0;
+         _mm_store...
       }
    }
 }
